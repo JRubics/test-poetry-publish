@@ -1,0 +1,17 @@
+name: PyPI
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and publish to pypi
+      uses: JRubics/poetry-publish@develop
+      with:
+        pypi_token: ${{ secrets.PYPI_TOKEN }}
