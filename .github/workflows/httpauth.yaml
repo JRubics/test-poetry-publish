@@ -19,3 +19,5 @@ jobs:
         repository_url: "https://test.pypi.org/legacy/"
         repository_username: ${{ secrets.USERNAME }}
         repository_password: ${{ secrets.PASSWORD }}
+        plugins: "poetry-dynamic-versioning-plugin"
+        poetry_version: "==1.2"
