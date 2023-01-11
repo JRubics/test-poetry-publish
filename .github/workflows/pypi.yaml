@@ -2,7 +2,7 @@ name: PyPI
 
 on:
   push:
-    branches: ["master"]
+    branches: ["subdirectory_path"]
 
 jobs:
   build:
@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: 'Checkout specific path'
+      uses: actions/checkout@v3.3
+      with:
+        path: 'subdirectory_path'
     - name: Build and publish to pypi
       uses: JRubics/poetry-publish@develop
       with:
