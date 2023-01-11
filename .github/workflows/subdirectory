@@ -8,10 +8,13 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: subdirectory
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.3.0
     - name: Build and publish to pypi
       uses: JRubics/poetry-publish@master
       with:
         pypi_token: ${{ secrets.PYPI_TOKEN }}
+        package_directory: "subdirectory"

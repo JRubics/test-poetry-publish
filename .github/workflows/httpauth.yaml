@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build and publish to pypi
-      uses: JRubics/poetry-publish@v1.13
+      uses: JRubics/poetry-publish@master
       with:
         python_version: "3.9.13"
         repository_name: "testpypi"
