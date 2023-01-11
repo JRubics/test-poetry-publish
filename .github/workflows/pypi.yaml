@@ -10,13 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 'Checkout specific path'
-      uses: actions/checkout@v3.3.0
-      with:
-        path: 'subdirectory_path'
-    - run: cd subdirectory_path
-    - run: ls -lah
+    - uses: actions/checkout@v3.3.0
     - name: Build and publish to pypi
       uses: JRubics/poetry-publish@master
       with:
         pypi_token: ${{ secrets.PYPI_TOKEN }}
+      working-directory: "subdirectory_path"
+      
