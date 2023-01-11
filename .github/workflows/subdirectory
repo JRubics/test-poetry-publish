@@ -1,4 +1,4 @@
-name: PyPI
+name: Subdirectory
 
 on:
   push:
@@ -8,11 +8,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: subdirectory
+
     steps:
-    - uses: actions/checkout@v3.3.0
+    - uses: actions/checkout@v2
     - name: Build and publish to pypi
       uses: JRubics/poetry-publish@master
       with:
