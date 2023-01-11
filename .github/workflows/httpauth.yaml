@@ -2,7 +2,7 @@ name: Http auth
 
 on:
   push:
-    branches: ["master"]
+    branches: ["subdirectory_path"]
 
 jobs:
   build:
