@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build and publish to pypi
-      uses: JRubics/poetry-publish@31c2daa52e8e2a9dfd2d6c82644daf125abc7ece
+      uses: JRubics/poetry-publish@poetry_install_options
       with:
         pypi_token: ${{ secrets.PYPI_TOKEN }}
         options: "--sync --dry-run"

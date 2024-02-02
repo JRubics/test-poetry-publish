@@ -1,19 +1,19 @@
-name: Test PyPI
+# name: Test PyPI
 
-on:
-  push:
-    branches: ["master"]
+# on:
+#   push:
+#     branches: ["master"]
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build and publish to pypi
-      uses: JRubics/poetry-publish@v1.17
-      with:
-        pypi_token: ${{ secrets.TEST_PYPI_TOKEN }}
-        repository_name: "testpypi"
-        repository_url: "https://test.pypi.org/legacy/"
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Build and publish to pypi
+#       uses: JRubics/poetry-publish@v1.17
+#       with:
+#         pypi_token: ${{ secrets.TEST_PYPI_TOKEN }}
+#         repository_name: "testpypi"
+#         repository_url: "https://test.pypi.org/legacy/"
