@@ -1,4 +1,4 @@
-name: PyPI
+name: options
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build and publish to pypi
-      uses: JRubics/poetry-publish@poetry_install_options
+      uses: JRubics/poetry-publish@31c2daa52e8e2a9dfd2d6c82644daf125abc7ece
       with:
         pypi_token: ${{ secrets.PYPI_TOKEN }}
         options: "--sync --dry-run"
