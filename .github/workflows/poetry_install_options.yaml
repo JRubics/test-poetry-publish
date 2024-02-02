@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build and publish to pypi
-      uses: JRubics/poetry-publish@poetry_install_options
+      uses: JRubics/poetry-publish@master
       with:
         pypi_token: ${{ secrets.PYPI_TOKEN }}
         options: "--sync --dry-run"
