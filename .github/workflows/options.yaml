@@ -1,4 +1,4 @@
-name: poetry_install_options
+name: options
 
 on:
   push:
