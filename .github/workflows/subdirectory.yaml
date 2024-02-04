@@ -1,18 +1,19 @@
-# name: Subdirectory
+name: Subdirectory
 
-# on:
-#   push:
-#     branches: ["master"]
+on:
+  push:
+    branches: ["master"]
 
-# jobs:
-#   build:
+jobs:
+  build:
 
-#     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-#     steps:
-#     - uses: actions/checkout@v2
-#     - name: Build and publish to pypi
-#       uses: JRubics/poetry-publish@poetry_install_options
-#       with:
-#         pypi_token: ${{ secrets.PYPI_TOKEN }}
-#         package_directory: "subdirectory"
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and publish to pypi
+      uses: JRubics/poetry-publish@poetry_install_options
+      with:
+        pypi_token: ${{ secrets.PYPI_TOKEN }}
+        package_directory: "subdirectory"
+        poetry_publish_options: "--dry-run"
