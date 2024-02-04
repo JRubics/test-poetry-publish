@@ -19,5 +19,5 @@ jobs:
         poetry_install_options: "--sync"
         poetry_publish_options: "--dry-run"
         python_version: "3.12.1"
-        # plugins: "poetry-dynamic-versioning-plugin"
+        # plugins: "poetry-version-plugin"
         poetry_version: "==1.7"
