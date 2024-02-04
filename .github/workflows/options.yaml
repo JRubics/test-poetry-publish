@@ -15,9 +15,9 @@ jobs:
       uses: JRubics/poetry-publish@poetry_install_options
       with:
         pypi_token: ${{ secrets.PYPI_TOKEN }}
-        poetry_install_options: "--sync --dry-run"
-        poetry_publish_options: "--dry-run"
-        python_version: "3.12.0"
         repository_name: "testpypi"
+        poetry_install_options: "--sync"
+        poetry_publish_options: "--dry-run"
+        python_version: "3.12.1"
         plugins: "poetry-dynamic-versioning-plugin"
         poetry_version: "==1.7"
