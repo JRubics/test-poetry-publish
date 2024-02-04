@@ -1,23 +1,20 @@
-name: Http auth
+# name: Http auth
 
-on:
-  push:
-    branches: ["master"]
+# on:
+#   push:
+#     branches: ["master"]
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build and publish to pypi
-      uses: JRubics/poetry-publish@poetry_install_options
-      with:
-        python_version: "3.12.0"
-        repository_name: "testpypi"
-        repository_url: "https://test.pypi.org/legacy/"
-        repository_username: ${{ secrets.USERNAME }}
-        repository_password: ${{ secrets.PASSWORD }}
-        plugins: "poetry-dynamic-versioning-plugin"
-        poetry_version: "==1.2"
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Build and publish to pypi
+#       uses: JRubics/poetry-publish@poetry_install_options
+#       with:
+#         repository_url: "https://test.pypi.org/legacy/"
+#         repository_username: ${{ secrets.USERNAME }}
+#         repository_password: ${{ secrets.PASSWORD }}
+# # EXPECTED TO FAIL
