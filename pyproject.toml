@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "test-jrubics-poetry-publish"
-version = "0.2.11"
+version = "0.2.12"
 description = ""
 authors = ["Jelena Dokic <jelena.dpk@gmail.com>"]
 

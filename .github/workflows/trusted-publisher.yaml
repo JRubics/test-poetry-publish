@@ -1,4 +1,4 @@
-# name: Test PyPI
+# name: Http auth
 
 # on:
 #   push:
@@ -14,6 +14,6 @@
 #     - name: Build and publish to pypi
 #       uses: JRubics/poetry-publish@poetry_install_options
 #       with:
-#         pypi_token: ${{ secrets.TEST_PYPI_TOKEN }}
+#         python_version: "3.9.13"
 #         repository_name: "testpypi"
 #         repository_url: "https://test.pypi.org/legacy/"
