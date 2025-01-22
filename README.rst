@@ -5,3 +5,7 @@ How to develop poetry publish:
 - push to develop branch
 - update actions to use develop branch
 - run actions
+- tag non rc-version and update version in poetetry-publish
+- merge to master
+- make a new release
+- update tests to non rc version
