@@ -18,6 +18,6 @@ jobs:
         repository_name: "testpypi"
         poetry_install_options: "--sync"
         poetry_publish_options: "--dry-run"
-        python_version: "3.12.2"
+        python_version: "3.12.3"
         plugins: "poetry-version-plugin"
         poetry_version: "==1.7"
